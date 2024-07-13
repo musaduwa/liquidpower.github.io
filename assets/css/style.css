@@ -1174,9 +1174,9 @@ select:visited {
   z-index: 1;
   overflow: visible;
   padding: 110px 0px 0px;
-  background-color: #0071b4; }
+  background-color: #fff; }
   .feature-style-two .background_overlay {
-    background-color: rgba(0, 113, 179, 0.95);
+    background-color: rgba(139, 175, 164, 0.95);
     z-index: -1; }
   .feature-style-two .section-title-left {
     max-width: 580px;
