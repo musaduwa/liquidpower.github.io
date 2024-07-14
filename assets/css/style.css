@@ -1735,7 +1735,7 @@ select:visited {
 
 .expertise-section {
   padding: 100px 0px 140px;
-  background-color: #0071b4; }
+  background-color: #0f5dd3; }
   .expertise-section .section-title-left .title-tag,
   .expertise-section .section-title-left h2 {
     color: #fff; }
@@ -3435,3 +3435,10 @@ select:visited {
 	color:#ff0000;
 	font-weight:500;	
 }
+
+.wide-tb-100{padding-top: 100px; padding-bottom: 100px;}
+
+.heading-main{color: #D59B2D; font-size: 2.80rem; position: relative; font-weight: 800; z-index: 1; margin-bottom: 3rem;}.heading-main small{color: #477763; font-family: 'Playfair Display', serif; position: relative; text-transform: capitalize; margin-bottom: 15px; display: block; font-size: 1.2rem; font-weight: 600;}
+
+.owl-carousel .owl-item .clients-logo img{display: inline-block; width: auto;}.clients-logo{background: #FFF; border-radius: 7px; padding: 1rem; text-align: center;}.clients-logo img{opacity: 0.7;cursor: pointer;-webkit-transition: all 400ms ease-in-out; -moz-transition: all 400ms ease-in-out; -o-transition: all 400ms ease-in-out; -ms-transition: all 400ms ease-in-out; transition: all 400ms ease-in-out;}.clients-logo:hover img{opacity: 1;}.clients-rounded-wrap{margin-bottom: 8rem;}
+#home-clients .owl-dots{margin-top: 1.5rem;}.owl-carousel .owl-item .clients-logo img{display: inline-block; width: auto;}.clients-logo{background: #FFF; border-radius: 7px; padding: 1rem; text-align: center;}
