@@ -4,8 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Environmental & Social Policy | Liquid Power</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    /* Reset */
+    :root {
+      --primary-blue: #003366;
+      --light-blue: #0073c6;
+      --deep-red: #8b0000;
+      --soft-gray: #f5f8fa;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,7 +21,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f8fa;
+      background-color: var(--soft-gray);
       color: #2e3d49;
       line-height: 1.7;
     }
@@ -24,30 +31,43 @@
       text-decoration: none;
     }
 
-    /* Top bar */
+    /* Top Bar */
     .top-bar {
-      background-color: #0073c6;
+      background-color: var(--light-blue);
       color: white;
       font-size: 0.9rem;
-      padding: 0.4rem 1rem;
+      padding: 0.5rem 1rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .top-bar .contact-info {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
+      align-items: center;
     }
 
-    .top-bar .contact-info i {
-      margin-right: 0.3rem;
+    .top-bar i {
+      margin-right: 0.4rem;
     }
 
-    /* Main navbar */
+    .top-bar .cta {
+      background-color: var(--deep-red);
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .top-bar .cta:hover {
+      background-color: #a50000;
+    }
+
+    /* Navbar */
     .navbar {
       background-color: #2c3e50;
-      color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -61,8 +81,9 @@
 
     .navbar nav {
       display: flex;
-      gap: 2rem;
       align-items: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
     }
 
     .navbar nav a {
@@ -73,7 +94,6 @@
     .navbar .socials {
       display: flex;
       gap: 0.8rem;
-      margin-left: 1rem;
     }
 
     .navbar .socials a {
@@ -81,20 +101,7 @@
       color: white;
     }
 
-    .navbar .cta {
-      background-color: #8b0000;
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 5px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-
-    .navbar .cta:hover {
-      background-color: #a50000;
-    }
-
-    /* Header Banner */
+    /* Hero */
     .header {
       background: linear-gradient(90deg, #003366, #00528c);
       color: white;
@@ -104,7 +111,6 @@
 
     .header h1 {
       font-size: 2.5rem;
-      margin-bottom: 0.5rem;
     }
 
     .subheader {
@@ -112,7 +118,7 @@
       font-size: 1.1rem;
     }
 
-    /* Content Styling */
+    /* Content */
     .content {
       max-width: 1000px;
       margin: 2rem auto;
@@ -120,7 +126,7 @@
     }
 
     section {
-      background-color: #fff;
+      background-color: white;
       border-radius: 12px;
       padding: 2rem;
       margin-bottom: 2rem;
@@ -128,14 +134,14 @@
     }
 
     h2 {
-      font-size: 1.6rem;
-      color: #003366;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
+      color: var(--primary-blue);
     }
 
     ul {
+      list-style: disc;
       padding-left: 1.5rem;
-      list-style-type: disc;
     }
 
     blockquote {
@@ -153,45 +159,45 @@
     }
 
     table th, table td {
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
       padding: 0.75rem;
       text-align: left;
     }
 
     table th {
       background-color: #f0f4f8;
-      color: #003366;
+      color: var(--primary-blue);
     }
 
-    /* Footer */
     .footer {
-      background-color: #003366;
-      color: #fff;
+      background-color: var(--primary-blue);
+      color: white;
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
     }
 
-    /* Icons (Font Awesome CDN) */
-    @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
-
     /* Responsive */
     @media (max-width: 768px) {
+      .top-bar, .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        text-align: center;
+      }
+
       .navbar nav {
         flex-direction: column;
-        gap: 1rem;
+        align-items: flex-start;
+        gap: 0.8rem;
       }
 
-      .top-bar {
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
+      .header h1 {
+        font-size: 2rem;
       }
 
-      .navbar {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
+      section {
+        padding: 1.2rem;
       }
     }
   </style>
@@ -210,14 +216,13 @@
   <!-- Main Navbar -->
   <div class="navbar">
     <div class="logo">
-      <img src="assets/img/logo/logo.png" alt="Liquid Power Logo" />
+      <img src="https://liquidpower.com.ng/assets/images/logo.png" alt="Liquid Power Logo" />
     </div>
     <nav>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="service-single.html">SERVICES</a>
-      <a href="esms.html">ESMS Policy</a>
-      <a href="contact.html">CONTACT</a>
+      <a href="/">HOME</a>
+      <a href="/about">ABOUT</a>
+      <a href="/services">SERVICES</a>
+      <a href="/contact">CONTACT</a>
       <div class="socials">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -234,15 +239,13 @@
 
   <!-- Main Content -->
   <main class="content">
-    <!-- All your sections: Our Commitment, Key Pillars, QuickView, etc. (unchanged from previous version) -->
-    <!-- Paste or keep all section blocks here as in previous message -->
-    <!-- ... -->
     <section>
       <h2>Our Commitment</h2>
       <p>
-        Liquid Power Integrated Systems Ltd. is dedicated to expanding clean, reliable electricity access while safeguarding the environment, enhancing public health and promoting inclusive socioeconomic growth. Our Environmental & Social Management System (ESMS) defines the principles, performance targets and governance structures that guide every decision we make—from site selection and engineering design through construction, operation and decommissioning of our energy assets. Whether we are building a 20 kWp solar minigrid for a rural community, installing a 3 MW commercial rooftop array or deploying battery energy storage systems for urban resilience, the same high bar applies.
+        Liquid Power Integrated Systems Ltd. is dedicated to expanding clean, reliable electricity access while safeguarding the environment, enhancing public health and promoting inclusive socioeconomic growth...
       </p>
     </section>
+
     <section>
       <h2>Key Pillars</h2>
       <ul>
@@ -256,10 +259,10 @@
         <li><strong>Climate Action & Biodiversity Stewardship:</strong> GHG tracking, GIS habitat screening, pollinator support.</li>
       </ul>
     </section>
+
     <section>
       <h2>QuickView Policy Statement</h2>
       <blockquote>“All injuries, illnesses and environmental harm are preventable.”</blockquote>
-      <p>Liquid Power commits to:</p>
       <ul>
         <li>Integrate E&S risk into every business decision.</li>
         <li>Provide safe, inclusive workplaces with empowered workers.</li>
@@ -270,6 +273,7 @@
       </ul>
       <p><a href="#">Download full policy in our ESMS Manual (PDF)</a></p>
     </section>
+
     <section>
       <h2>How We Implement the Policy</h2>
       <table>
@@ -304,6 +308,7 @@
         </tbody>
       </table>
     </section>
+
     <section>
       <h2>Downloads</h2>
       <ul>
@@ -312,6 +317,7 @@
         <li><a href="#">Grievance Redress Mechanism Plan (PDF)</a></li>
       </ul>
     </section>
+
     <section>
       <h2>Contact the E&S Unit</h2>
       <p><strong>Phone:</strong> 0800LIQUIDGRM (24 h)</p>
@@ -319,6 +325,7 @@
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Liquid Power Integrated Systems Ltd.</p>
   </footer>
